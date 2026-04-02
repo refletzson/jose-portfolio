@@ -12,7 +12,7 @@ export default function Footer() {
   const scrollTo = (href) => document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
 
   return (
-    <footer style={{ background: '#000', borderTop: '1px solid #1c1c1c' }}>
+    <footer style={{ background: 'transparent', borderTop: '1px solid #1c1c1c' }}>
       <div className="max-w-5xl mx-auto px-6 lg:px-8 py-14">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 mb-12">
           {/* Brand */}

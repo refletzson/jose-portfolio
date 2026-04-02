@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      style={{ background: '#000' }}
+      style={{ background: 'transparent' }}
       className="min-h-screen flex flex-col items-center justify-center px-6 text-center pt-14"
     >
       <div className="max-w-3xl mx-auto w-full">

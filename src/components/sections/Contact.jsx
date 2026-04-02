@@ -25,7 +25,7 @@ export default function Contact() {
   return (
     <section
       id="contato"
-      style={{ background: '#000', borderTop: '1px solid #1c1c1c' }}
+      style={{ background: 'transparent', borderTop: '1px solid #1c1c1c' }}
       className="py-32 px-6"
     >
       <div className="max-w-5xl mx-auto">
