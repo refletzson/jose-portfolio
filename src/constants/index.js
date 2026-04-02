@@ -29,12 +29,12 @@ export const PROJECTS = [
   },
   {
     id: 3,
-    title: 'E-commerce de Moda',
+    title: 'Site para Barbearia',
     description:
-      'Loja virtual completa com catálogo de produtos, carrinho de compras e checkout simplificado.',
-    tags: ['E-commerce', 'Loja Virtual', 'Pagamentos'],
-    image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80',
-    url: '#',
+      'Landing page moderna para barbearia com apresentação de serviços, galeria de fotos e integração com WhatsApp.',
+    tags: ['Landing Page', 'Responsivo', 'WhatsApp'],
+    image: 'https://api.microlink.io/?url=https://invictus-barbearia.vercel.app/&screenshot=true&meta=false&embed=screenshot.url',
+    url: 'https://invictus-barbearia.vercel.app/',
   },
 ]
 
