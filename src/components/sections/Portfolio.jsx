@@ -13,7 +13,7 @@ const swiperStyles = `
   .portfolio-swiper {
     width: 100%;
     padding-bottom: 50px !important;
-    overflow: visible !important;
+    overflow: hidden !important;
   }
   .portfolio-swiper .swiper-slide {
     transition: transform 0.4s ease, opacity 0.4s ease;
