@@ -83,6 +83,7 @@ export default function Portfolio() {
             grabCursor={true}
             centeredSlides={true}
             loop={true}
+            loopAdditionalSlides={PROJECTS.length}
             slidesPerView="auto"
             coverflowEffect={{
               rotate: 0,
