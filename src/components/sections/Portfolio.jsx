@@ -8,6 +8,8 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import { PROJECTS } from '../../constants'
 
+const LOOPED_PROJECTS = [...PROJECTS, ...PROJECTS, ...PROJECTS]
+
 const swiperStyles = `
   .portfolio-swiper {
     width: 100%;
@@ -83,7 +85,6 @@ export default function Portfolio() {
             grabCursor={true}
             centeredSlides={true}
             loop={true}
-            loopAdditionalSlides={PROJECTS.length}
             slidesPerView="auto"
             coverflowEffect={{
               rotate: 0,
@@ -96,8 +97,8 @@ export default function Portfolio() {
             navigation={true}
             modules={[EffectCoverflow, Autoplay, Pagination, Navigation]}
           >
-            {PROJECTS.map((project) => (
-              <SwiperSlide key={project.id}>
+            {LOOPED_PROJECTS.map((project, index) => (
+              <SwiperSlide key={`${project.id}-${index}`}>
                 <a
                   href={project.url}
                   target="_blank"
