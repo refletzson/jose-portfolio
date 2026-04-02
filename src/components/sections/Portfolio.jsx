@@ -1,9 +1,8 @@
 import { motion } from 'framer-motion'
 import { FiArrowUpRight } from 'react-icons/fi'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { EffectCoverflow, Autoplay, Pagination, Navigation } from 'swiper/modules'
+import { Autoplay, Pagination, Navigation } from 'swiper/modules'
 import 'swiper/css'
-import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import { PROJECTS } from '../../constants'
@@ -14,11 +13,22 @@ const swiperStyles = `
   .portfolio-swiper {
     width: 100%;
     padding-bottom: 50px !important;
+    overflow: visible !important;
   }
   .portfolio-swiper .swiper-slide {
-    width: 340px;
-    background-position: center;
-    background-size: cover;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    opacity: 0.4;
+    transform: scale(0.88);
+  }
+  .portfolio-swiper .swiper-slide-active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 2;
+  }
+  .portfolio-swiper .swiper-slide-prev,
+  .portfolio-swiper .swiper-slide-next {
+    opacity: 0.6;
+    transform: scale(0.88);
   }
   .portfolio-swiper .swiper-3d .swiper-slide-shadow-left,
   .portfolio-swiper .swiper-3d .swiper-slide-shadow-right {
@@ -80,22 +90,20 @@ export default function Portfolio() {
         >
           <Swiper
             className="portfolio-swiper"
-            spaceBetween={30}
-            effect="coverflow"
+            spaceBetween={24}
             grabCursor={true}
             centeredSlides={true}
             loop={true}
-            slidesPerView="auto"
-            coverflowEffect={{
-              rotate: 0,
-              stretch: 0,
-              depth: 100,
-              modifier: 2.5,
+            slidesPerView={3}
+            breakpoints={{
+              0: { slidesPerView: 1 },
+              640: { slidesPerView: 1.4 },
+              900: { slidesPerView: 3 },
             }}
             autoplay={{ delay: 2500, disableOnInteraction: false }}
             pagination={true}
             navigation={true}
-            modules={[EffectCoverflow, Autoplay, Pagination, Navigation]}
+            modules={[Autoplay, Pagination, Navigation]}
           >
             {LOOPED_PROJECTS.map((project, index) => (
               <SwiperSlide key={`${project.id}-${index}`}>
