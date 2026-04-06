@@ -29,7 +29,7 @@ export const PROJECTS = [
   },
   {
     id: 3,
-    title: 'Site para Stock Car',
+    title: 'Site para Oficinas',
     description:
       'Landing page dinâmica para equipe de automobilismo com apresentação de pilotos, resultados e patrocinadores.',
     tags: ['Landing Page', 'Responsivo', 'Esportes'],
