@@ -29,6 +29,15 @@ export const PROJECTS = [
   },
   {
     id: 3,
+    title: 'Site para Stock Car',
+    description:
+      'Landing page dinâmica para equipe de automobilismo com apresentação de pilotos, resultados e patrocinadores.',
+    tags: ['Landing Page', 'Responsivo', 'Esportes'],
+    image: 'https://api.microlink.io/?url=https://stock-car-tan.vercel.app/&screenshot=true&meta=false&embed=screenshot.url',
+    url: 'https://stock-car-tan.vercel.app/',
+  },
+  {
+    id: 4,
     title: 'Site para Barbearia',
     description:
       'Landing page moderna para barbearia com apresentação de serviços, galeria de fotos e integração com WhatsApp.',
